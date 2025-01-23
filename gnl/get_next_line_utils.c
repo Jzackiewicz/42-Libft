@@ -6,13 +6,13 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:57 by jzackiew          #+#    #+#             */
-/*   Updated: 2024/12/13 13:46:09 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/23 13:10:54 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strchr(char *str, char x)
+int	is_in_string(char *str, char x)
 {
 	int	i;
 

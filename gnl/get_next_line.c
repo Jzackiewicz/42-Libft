@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:22 by jzackiew          #+#    #+#             */
-/*   Updated: 2024/12/29 12:15:21 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/23 13:08:13 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*save_remains(char *line)
 
 	i = 0;
 	line_len = ft_strlen(line);
-	if (!ft_strchr(line, '\n'))
+	if (!is_in_string(line, '\n'))
 		return (NULL);
 	while (line[i] != '\n')
 		i++;
@@ -77,7 +77,7 @@ char	*find_line(int fd, char *new_line)
 	char	*tmp;
 	char	*buf;
 
-	while (!ft_strchr(new_line, '\n'))
+	while (!is_in_string(new_line, '\n'))
 	{
 		buf = (char *)ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 		bytes_read = read(fd, buf, BUFFER_SIZE);
