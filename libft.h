@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 16:00:44 by jzackiew          #+#    #+#             */
-/*   Updated: 2024/12/07 13:56:02 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/23 13:11:20 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include "gnl/get_next_line.h"
 
 // PART 1
 int					ft_isdigit(int c);

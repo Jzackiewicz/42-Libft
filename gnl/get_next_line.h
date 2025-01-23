@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:25 by jzackiew          #+#    #+#             */
-/*   Updated: 2024/12/13 13:32:03 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/23 13:08:05 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@
 # endif
 
 char	*get_next_line(int fd);
-int		ft_strchr(char *str, char x);
-int		ft_strchr(char *str, char x);
+int		is_in_string(char *str, char x);
 size_t	ft_strlen(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strcpy(char *dst, const char *src);
