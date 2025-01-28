@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:22 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/28 12:11:58 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:16:31 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ char	*apply_remains(char *remains)
 
 	if (remains)
 	{
-		new_line = (char *)gnl_ft_calloc(gnl_ft_strlen(remains) + 1, sizeof(char));
+		new_line = (char *)gnl_ft_calloc(gnl_ft_strlen(remains) + 1,
+				sizeof(char));
 		gnl_ft_strcpy(new_line, remains);
 		free(remains);
 		remains = NULL;
