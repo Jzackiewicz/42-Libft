@@ -16,7 +16,8 @@ SRCS = ft_isalnum.c ft_isalpha.c ft_isdigit.c \
 	   ft_putendl_fd.c ft_putnbr_fd.c \
 	   gnl/get_next_line.c gnl/get_next_line_utils.c \
 	   ft_printf/ft_printf.c ft_printf/ft_utoa.c \
-	   ft_printf/hex_conversion.c ft_printf/put_variables.c
+	   ft_printf/hex_conversion.c ft_printf/put_variables.c \
+	   ft_2d_strdup.c ft_2d_strlen.c ft_realloc.c
 
 SRCS_BONUS = ft_lstnew.c ft_lstsize.c ft_lstadd_back.c \
 			 ft_lstadd_front.c ft_lstlast.c ft_lstdelone.c \

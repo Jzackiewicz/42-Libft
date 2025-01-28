@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 16:00:44 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/23 13:23:14 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 11:58:04 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,9 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+
+//	NEW
+char				**ft_2d_strdup(char **arr);
+int					ft_2d_strlen(char **arr);
+void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 #endif
