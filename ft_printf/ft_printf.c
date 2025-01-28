@@ -6,11 +6,25 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 15:00:24 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/23 13:37:10 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:14:01 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	is_in_string(char *str, char x)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (x == str[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 static int	handle_conversion(char x, va_list ptr)
 {
