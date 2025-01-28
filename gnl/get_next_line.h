@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:25 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/23 13:08:05 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:11:47 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@
 # endif
 
 char	*get_next_line(int fd);
-int		is_in_string(char *str, char x);
-size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
-size_t	ft_strcpy(char *dst, const char *src);
+int		gnl_is_in_string(char *str, char x);
+size_t	gnl_ft_strlen(const char *s);
+char	*gnl_ft_strjoin(char const *s1, char const *s2);
+size_t	gnl_ft_strcpy(char *dst, const char *src);
 char	*strip_line(char *line, char *to_strip);
-void	*ft_calloc(size_t nmemb, size_t size);
+void	*gnl_ft_calloc(size_t nmemb, size_t size);
 
 #endif

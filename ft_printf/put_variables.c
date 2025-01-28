@@ -6,11 +6,12 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 19:03:26 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/23 13:33:46 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:13:56 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 
 int	put_base_str(va_list ptr, char *base)
 {

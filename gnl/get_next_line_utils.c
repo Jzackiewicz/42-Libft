@@ -6,13 +6,13 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:57 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/23 13:10:54 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:12:16 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	is_in_string(char *str, char x)
+int	gnl_is_in_string(char *str, char x)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	is_in_string(char *str, char x)
 	return (0);
 }
 
-size_t	ft_strlen(const char *s)
+size_t	gnl_ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*gnl_ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1_len;
 	size_t	s2_len;
@@ -47,9 +47,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	new_string = (char *)ft_calloc((s1_len + s2_len + 1), sizeof(char));
+	s1_len = gnl_ft_strlen(s1);
+	s2_len = gnl_ft_strlen(s2);
+	new_string = (char *)gnl_ft_calloc((s1_len + s2_len + 1), sizeof(char));
 	i = -1;
 	while (s1[++i])
 		new_string[i] = s1[i];
@@ -60,7 +60,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new_string);
 }
 
-size_t	ft_strcpy(char *dst, const char *src)
+size_t	gnl_ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 	size_t	src_len;
@@ -69,7 +69,7 @@ size_t	ft_strcpy(char *dst, const char *src)
 	i = 0;
 	if (!dst || !src)
 		return (0);
-	src_len = ft_strlen(src);
+	src_len = gnl_ft_strlen(src);
 	while (src[i] != 0)
 	{
 		dst[i] = (char)src[i];
@@ -79,7 +79,7 @@ size_t	ft_strcpy(char *dst, const char *src)
 	return (src_len);
 }
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*gnl_ft_calloc(size_t nmemb, size_t size)
 {
 	void			*data;
 	unsigned char	*p;

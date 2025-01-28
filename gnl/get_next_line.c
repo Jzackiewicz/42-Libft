@@ -6,7 +6,7 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:22 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/23 13:08:13 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:11:58 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*save_remains(char *line)
 	char	*remains;
 
 	i = 0;
-	line_len = ft_strlen(line);
-	if (!is_in_string(line, '\n'))
+	line_len = gnl_ft_strlen(line);
+	if (!gnl_is_in_string(line, '\n'))
 		return (NULL);
 	while (line[i] != '\n')
 		i++;
-	remains = (char *)ft_calloc(line_len - i + 1, sizeof(char));
+	remains = (char *)gnl_ft_calloc(line_len - i + 1, sizeof(char));
 	j = 0;
 	while (line[++i])
 		remains[j++] = line[i];
@@ -38,13 +38,13 @@ char	*apply_remains(char *remains)
 
 	if (remains)
 	{
-		new_line = (char *)ft_calloc(ft_strlen(remains) + 1, sizeof(char));
-		ft_strcpy(new_line, remains);
+		new_line = (char *)gnl_ft_calloc(gnl_ft_strlen(remains) + 1, sizeof(char));
+		gnl_ft_strcpy(new_line, remains);
 		free(remains);
 		remains = NULL;
 	}
 	else
-		new_line = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+		new_line = (char *)gnl_ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	return (new_line);
 }
 
@@ -56,8 +56,8 @@ char	*strip_line(char *line, char *to_strip)
 
 	if (!line || !to_strip)
 		return (NULL);
-	idx = ft_strlen(line) - ft_strlen(to_strip);
-	tmp = (char *)ft_calloc(idx + 1, sizeof(char));
+	idx = gnl_ft_strlen(line) - gnl_ft_strlen(to_strip);
+	tmp = (char *)gnl_ft_calloc(idx + 1, sizeof(char));
 	if (!tmp)
 		return (NULL);
 	j = 0;
@@ -77,19 +77,19 @@ char	*find_line(int fd, char *new_line)
 	char	*tmp;
 	char	*buf;
 
-	while (!is_in_string(new_line, '\n'))
+	while (!gnl_is_in_string(new_line, '\n'))
 	{
-		buf = (char *)ft_calloc((BUFFER_SIZE + 1), sizeof(char));
+		buf = (char *)gnl_ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 		if (bytes_read <= 0)
 		{
 			free(buf);
-			if (bytes_read == 0 && ft_strlen(new_line))
+			if (bytes_read == 0 && gnl_ft_strlen(new_line))
 				break ;
 			free(new_line);
 			return (NULL);
 		}
-		tmp = ft_strjoin(new_line, buf);
+		tmp = gnl_ft_strjoin(new_line, buf);
 		free(new_line);
 		free(buf);
 		new_line = tmp;
