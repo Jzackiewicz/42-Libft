@@ -6,11 +6,11 @@
 /*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 08:29:29 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/02/18 08:35:22 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/02/18 08:52:38 by jzackiew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	ft_debug(void)
 {
