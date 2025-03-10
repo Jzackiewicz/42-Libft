@@ -6,7 +6,7 @@
 /*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 16:13:16 by agarbacz          #+#    #+#             */
-/*   Updated: 2025/03/03 16:13:47 by agarbacz         ###   ########.fr       */
+/*   Updated: 2025/03/05 21:09:38 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_arr2d_free(char **arr)
 {
 	int	i;
-
+	
 	i = 0;
 	while (arr[i])
 	{

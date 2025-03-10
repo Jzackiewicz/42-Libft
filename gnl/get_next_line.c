@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzackiew <jzackiew@student.42.fr>          +#+  +:+       +#+        */
+/*   By: agarbacz <agarbacz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 09:32:22 by jzackiew          #+#    #+#             */
-/*   Updated: 2025/01/28 12:16:31 by jzackiew         ###   ########.fr       */
+/*   Updated: 2025/03/10 19:01:27 by agarbacz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,13 +98,19 @@ char	*find_line(int fd, char *new_line)
 	return (new_line);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, int reset_remains)
 {
 	char		*new_line;
 	static char	*remains = NULL;
 
 	if (fd < 0)
 		return (NULL);
+	if (reset_remains)
+	{
+		// if (remains && *remains)
+		// 	free(remains);?
+		remains = NULL;
+	}
 	new_line = apply_remains(remains);
 	new_line = find_line(fd, new_line);
 	if (!new_line)
